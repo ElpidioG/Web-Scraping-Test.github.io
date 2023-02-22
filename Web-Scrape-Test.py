@@ -173,7 +173,7 @@ for links in soup.find_all('a'):
     #Pointing URls in index.html to their new HTML file
     with open(r'index.html', 'r', encoding='utf-8') as file:
             data = file.read()
-            data = data.replace("href="+'"'+links.get('href')+'"',"href="+'"'+ name+".html"+'"')
+            data = data.replace("href="+'"'+links.get('href')+'"',"href="+'"'+ name)
     with open(r'index.html', 'w', encoding='utf-8') as file:
             file.write(data)
 
